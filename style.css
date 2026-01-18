@@ -238,3 +238,66 @@ form input::placeholder {
 .socials button:hover {
   background: #2a2540;
 }
+/* --- MOBILE RESPONSIVENESS --- */
+
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start; /* Allows scrolling on short screens */
+    padding: 20px;
+  }
+
+  .container {
+    flex-direction: column; /* Stacks slider on top of form */
+    width: 100%;
+    height: auto;
+    max-width: 450px; /* Standard mobile width */
+  }
+
+  /* LEFT PANEL (SLIDER) ADJUSTMENTS */
+  .left-panel {
+    height: 250px; /* Fixed height for the header image */
+    flex: none;
+    /* This creates the premium "faded" effect at the bottom */
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+
+  .left-content {
+    padding: 20px;
+  }
+
+  .back-btn {
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .hero-text {
+    bottom: 30px;
+    left: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  /* RIGHT PANEL (FORM) ADJUSTMENTS */
+  .right-panel {
+    padding: 30px 20px 40px; /* Tighter padding for mobile */
+  }
+
+  .right-panel h1 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    margin-bottom: 25px;
+  }
+
+  /* Stack First/Last name inputs on very small screens */
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
