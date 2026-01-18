@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3b3650, #2b263a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 1100px;
+  height: 650px;
+  background: #1f1c2b;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* LEFT PANEL */
+.left-panel {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+/* SLIDER */
+.slider {
+  position: absolute;
+  inset: 0;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(20,15,40,0.6), rgba(20,15,40,0.6));
+}
+
+/* CONTENT ON TOP */
+.left-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 30px;
+}
+
+/* LOGO */
+.logo {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* HERO TEXT */
+.hero-text {
+  position: absolute;
+  bottom: 60px;
+  left: 40px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+/* DOTS */
+.dots {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 25px;
+  height: 4px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 5px;
+}
+
+.dot.active {
+  background: white;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+  flex: 1;
+  padding: 60px;
+  color: white;
+}
+
+.right-panel h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+.subtitle a {
+  color: #7b6cff;
+  text-decoration: none;
+}
+
+form input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: none;
+  background: #2b2740;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+form input::placeholder {
+  color: #999;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box .eye {
+  position: absolute;
+  right: 15px;
+  top: 14px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* TERMS */
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #aaa;
+  margin: 10px 0 30px;
+}
+
+.terms a {
+  color: #7b6cff;
+  text-decoration: none;
+}
+
+/* MAIN BUTTON */
+.main-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #6b5bd2;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.main-btn:hover {
+  background: #7b6cff;
+}
+
+/* DIVIDER */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 30px 0;
+  color: #777;
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background: #333;
+}
+
+/* SOCIAL BUTTONS */
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.socials button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.socials button:hover {
+  background: #2a2540;
+}

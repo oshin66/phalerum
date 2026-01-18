@@ -1,0 +1,108 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dēmárātos - Create Account</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="left-panel">
+
+      <!-- Background Slider -->
+      <div class="slider">
+        <div class="slide active" style="background-image: url('building.jpg');"></div>
+        <div class="slide" style="background-image: url('empire_state.jpg');"></div>
+        <div class="slide" style="background-image: url('statueofliberty.jpg');"></div>
+      </div>
+
+      <!-- Dark overlay -->
+      <div class="overlay"></div>
+
+      <!-- Content -->
+      <div class="left-content">
+
+        <div class="logo">Dēmárātos</div>
+
+        <button class="back-btn">← Back to website</button>
+
+        <div class="hero-text">
+          <h1>Capturing Moments,<br>Creating Memories</h1>
+
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right-panel">
+      <h1>Create an account</h1>
+      <p class="subtitle">Already have an account? <a href="#">Log in</a></p>
+
+      <form>
+        <div class="row">
+          <input type="text" placeholder="First name">
+          <input type="text" placeholder="Last name">
+        </div>
+
+        <input type="email" placeholder="Email">
+
+        <div class="password-box">
+          <input type="password" placeholder="Enter your password">
+          <span class="eye">👁</span>
+        </div>
+
+        <div class="terms">
+          <input type="checkbox" id="agree">
+          <label for="agree">I agree to the <a href="#">Terms & Conditions</a></label>
+        </div>
+
+        <button class="main-btn">Create account</button>
+
+        <div class="divider">
+          <span></span>
+          <p>Or register with</p>
+          <span></span>
+        </div>
+
+        <div class="socials">
+          <button class="google">Google</button>
+          <button class="apple">Apple</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- ✅ SLIDER SCRIPT (DO NOT MOVE THIS) -->
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+
+    let index = 0;
+
+    if (slides.length > 0) {
+      setInterval(() => {
+        slides[index].classList.remove("active");
+        dots[index].classList.remove("active");
+
+        index = (index + 1) % slides.length;
+
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
+      }, 4000);
+    }
+  </script>
+
+</body>
+</html>
